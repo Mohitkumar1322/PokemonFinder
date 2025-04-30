@@ -45,11 +45,11 @@ function App() {
   });
 
   if (error) return <p>Error fetching Pokemon.</p>;
-  if (loading) return <p>Loading Pokemon...</p>;
+  if (loading) return <p>Loading Pokémon...</p>;
 
   return (
     <div>
-      <h1>Pokemon Finder</h1>
+      <h1>Pokemon Explorer</h1>
   
       <div className="controls">
         <SearchBar search={search} setSearch={setSearch} />

@@ -44,27 +44,19 @@ function App() {
     return matchesSearch && matchesType;
   });
 
-  if (error) return <p>Error fetching Pokemon.</p>;
-  if (loading) return <p>Loading Pokemon...</p>;
+  if (error) return <p>Error fetching Pokémon.</p>;
+  if (loading) return <p>Loading Pokémon...</p>;
 
   return (
     <div>
-      <h1>Pokemon Finder</h1>
-  
-      <div className="controls">
-        <SearchBar search={search} setSearch={setSearch} />
-        <TypeFilter setTypeFilter={setTypeFilter} />
-      </div>
-  
-      <div className="pokemon-grid">
+      <h1>Pokemon Explorer</h1>
+      <SearchBar search={search} setSearch={setSearch} />
+      <TypeFilter setTypeFilter={setTypeFilter} />
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {filtered.length === 0 ? (
-          <p>No Pokemon found.</p>
+          <p>No Pokémon found.</p>
         ) : (
-          filtered.map((p) => (
-            <div className="pokemon-card" key={p.id}>
-              <PokemonCard pokemon={p} />
-            </div>
-          ))
+          filtered.map((p) => <PokemonCard key={p.id} pokemon={p} />)
         )}
       </div>
     </div>

@@ -44,12 +44,12 @@ function App() {
     return matchesSearch && matchesType;
   });
 
-  if (error) return <p>Error fetching Pokemon.</p>;
-  if (loading) return <p>Loading Pokemon...</p>;
+  if (error) return <p>Error fetching Pokémon.</p>;
+  if (loading) return <p>Loading Pokémon...</p>;
 
   return (
     <div>
-      <h1>Pokemon Finder</h1>
+      <h1>Pokémon Explorer</h1>
   
       <div className="controls">
         <SearchBar search={search} setSearch={setSearch} />
@@ -58,7 +58,7 @@ function App() {
   
       <div className="pokemon-grid">
         {filtered.length === 0 ? (
-          <p>No Pokemon found.</p>
+          <p>No Pokémon found.</p>
         ) : (
           filtered.map((p) => (
             <div className="pokemon-card" key={p.id}>
