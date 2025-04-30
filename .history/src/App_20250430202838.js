@@ -45,7 +45,7 @@ function App() {
   });
 
   if (error) return <p>Error fetching Pokemon.</p>;
-  if (loading) return <p>Pikachuuu is Coming..⚡</p>;
+  if (loading) return <p>Pikachuuu is Coming</p>;
 
   return (
     <div>
